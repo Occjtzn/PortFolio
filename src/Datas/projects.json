@@ -1,0 +1,51 @@
+[
+  {
+    "id": "H57180",
+    "title": "Chalets Aude App",
+    "imgSrc": "/public/assets/Images/CardsImg/Chalets-Aude-App.webp",
+    "Description": "Projet personnel en React (en cours ...)",
+    "GitLink": "https://github.com/Occjtzn/ChaletAude",
+    "Site": "https://chalet-aude-pmvb.vercel.app/",
+    "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoReact"]
+  },
+  {
+    "id": "H57743",
+    "title": "Kasa App",
+    "imgSrc": "/public/assets/Images/CardsImg/Kasa-App.webp",
+    "Description": "Page dynamique en React",
+    "GitLink": "https://github.com/Occjtzn/KasaApp",
+    "Site": "https://kasa-app-theta.vercel.app/",
+    "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoReact"]
+  },
+  {
+    "id": "H57972",
+    "title": "Booki App",
+    "imgSrc": "/public/assets/Images/CardsImg/Booki-App.webp",
+    "Description": "One Page factice responsive",
+    "GitLink": "https://github.com/Occjtzn/BookiApp",
+    "Site": "https://occjtzn.github.io/BookiApp/",
+    "technologies": ["IoLogoHtml5", "IoLogoCss3"]
+  },
+  {
+    "id": "H57571",
+    "title": "Sophie Bluel App",
+    "imgSrc": "/public/assets/Images/CardsImg/Sophie-Bluel-App.webp",
+    "Description": "Page dynamique en JS",
+    "GitLink": "https://github.com/Occjtzn/SophieBluelApp",
+    "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoJavascript"]
+  },
+  {
+    "id": "H57814",
+    "title": "Nina Corducci App",
+    "imgSrc": "/public/assets/Images/CardsImg/NinaCurducci.webp",
+    "Description": "Site avec SEO optimisé et débugué",
+    "GitLink": "https://github.com/Occjtzn/NinaCarducciApp",
+    "Site": "https://occjtzn.github.io/NinaCarducciApp/",
+    "technologies": [
+      "IoLogoHtml5",
+      "IoLogoCss3",
+      "IoLogoJavascript",
+      "SiLighthouse"
+    ]
+  }
+]
