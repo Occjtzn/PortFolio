@@ -11,6 +11,6 @@ export default defineConfig({
       mozjpeg: { quality: 85 },
       pngquant: { quality: [0.6, 0.8] },
       svgo: { plugins: [{ removeViewBox: false }] },
-    }), // Optimisation des images
+    }),
   ],
 });
