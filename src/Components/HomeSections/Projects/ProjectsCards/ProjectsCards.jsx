@@ -38,7 +38,9 @@ export const ProjectsCards = () => {
             <img
               src={project.imgSrc}
               alt={project.title}
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              width="100%"
+              height="300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <p className="text-white text-center mb-10 px-6 py-4 bg-[#1d1f20] bg-opacity-80 rounded-lg shadow-lg leading-relaxed text-lg">
