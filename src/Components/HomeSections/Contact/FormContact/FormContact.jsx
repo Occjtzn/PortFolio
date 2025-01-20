@@ -25,14 +25,9 @@ export const FormContact = () => {
         'D_qmx7p3dICy8uYMM'
       )
       .then(
-        () => {
-          toggleModal('success', true);
-        },
-        () => {
-          toggleModal('error', true);
-        }
+        () => toggleModal('success', true),
+        () => toggleModal('error', true)
       );
-
     form.current.reset();
     toggleModal('confirm', false);
   };

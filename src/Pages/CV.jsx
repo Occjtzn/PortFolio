@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { NavLogo } from '../Components/Navbar/NavLogo/NavLogo';
 import { CVFrame } from '../Components/CVFrame/CVFrame';
 import { MiroFrame } from '../Components/MiroFrame/MiroFrame';
 import { ReturnButton } from '../Components/ReturnButton/ReturnButton';
@@ -14,8 +13,7 @@ export const CV = () => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 w-full bg-bgLight/80 backdrop-blur-md z-[1000] shadow-lg flex items-center px-4 py-2">
-        <NavLogo />
+      <div className="fixed w-full z-[1000] flex items-center px-4 py-2">
         <div className="ml-auto mr-8">
           <ReturnButton />
         </div>

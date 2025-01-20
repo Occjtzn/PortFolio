@@ -8,7 +8,7 @@ export const About = () => (
   >
     <HomeSectionsTitle section="presentation" className="mb-10" />
 
-    <div className="relative w-[80%] h-[2px] mb-36 my-20 mx-auto rounded bg-gradient-to-r from-highlight to-bgDark"></div>
+    <div className="relative w-[80%] h-[2px] mb-36 my-20 mx-auto rounded bg-gradient-to-r from-highlight to-bgDark" />
 
     <p className="mb-[20px] text-text text-center max-w-[900px] leading-relaxed font-body font-light text-2xl">
       Passionné par le développement web, je conçois des solutions modernes et
