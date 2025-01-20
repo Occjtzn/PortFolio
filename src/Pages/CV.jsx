@@ -5,7 +5,7 @@ import { ReturnButton } from '../Components/ReturnButton/ReturnButton';
 import { Footer } from '../Components/Footer/Footer';
 
 export const CV = () => {
-  const cvUrl = '/public/assets/CV/CV.pdf';
+  const cvUrl = '/assets/CV/CV.pdf';
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
