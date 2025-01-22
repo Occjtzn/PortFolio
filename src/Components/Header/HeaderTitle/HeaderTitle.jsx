@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export const HeaderTitle = () => (
   <div className="absolute bottom-10 sm:bottom-20 sm:right-20 text-bgLight space-y-6 p-4 font-body">
     <motion.h1
-      className="text-5xl sm:text-6xl uppercase tracking-wide text-white bg-black/40 backdrop-blur-md shadow-lg px-4 py-2 rounded-lg"
+      className="text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wide text-white bg-black/40 backdrop-blur-md shadow-lg px-4 py-2 rounded-lg"
       initial={{ opacity: 0, y: -50, scale: 0.8 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
@@ -13,7 +13,7 @@ export const HeaderTitle = () => (
 
     <div className="flex items-center">
       <motion.h2
-        className="text-3xl sm:text-4xl uppercase tracking-widest overflow-hidden whitespace-nowrap font-code text-highlight"
+        className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-widest overflow-hidden whitespace-nowrap font-code text-highlight"
         initial={{ width: 0 }}
         animate={{ width: '70%' }}
         transition={{ duration: 3, ease: 'easeOut', delay: 2.5 }}
@@ -27,7 +27,7 @@ export const HeaderTitle = () => (
       </motion.h2>
 
       <motion.div
-        className="text-4xl text-highlight"
+        className="text-3xl sm:text-4xl text-highlight"
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 0] }}
         transition={{
@@ -42,7 +42,7 @@ export const HeaderTitle = () => (
     </div>
 
     <motion.p
-      className="text-lg sm:text-2xl italic text-bgMedium"
+      className="text-base sm:text-lg lg:text-2xl italic text-bgMedium"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, ease: 'easeOut', delay: 5 }}
