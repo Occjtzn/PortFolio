@@ -11,20 +11,15 @@ export const NavBar = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-      className="top-0 left-0 w-full z-[1000] bg-bgLight/80 backdrop-blur-md shadow-lg"
+      className="relative lg:fixed top-0 left-0 w-full z-[1000] bg-bgLight/80 backdrop-blur-md shadow-lg"
     >
       <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 h-16 sm:h-20 md:h-24">
-        {/* Logo */}
         <div className="flex items-center flex-none">
           <NavLogo />
         </div>
-
-        {/* Navigation Links (Desktop) */}
         <div className="hidden md:flex flex-1 justify-center space-x-6 sm:space-x-8 lg:space-x-12">
           <NavLink />
         </div>
-
-        {/* Burger Menu Button (Visible at md and below) */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -61,7 +56,6 @@ export const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
         initial={false}
         animate={{
