@@ -14,61 +14,71 @@ export const ProgressBar = () => {
       name: 'HTML',
       value: 95,
       color: 'primary',
-      icon: <IoLogoHtml5 className="text-orange-500 text-6xl" />,
+      icon: (
+        <IoLogoHtml5 className="text-orange-500 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
     {
       name: 'CSS',
       value: 90,
       color: 'secondary',
-      icon: <IoLogoCss3 className="text-blue-500 text-6xl" />,
+      icon: (
+        <IoLogoCss3 className="text-blue-500 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
     {
       name: 'React',
       value: 80,
       color: 'success',
-      icon: <IoLogoReact className="text-cyan-500 text-6xl" />,
+      icon: (
+        <IoLogoReact className="text-cyan-500 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
     {
       name: 'Tailwind CSS',
       value: 70,
       color: 'blue',
-      icon: <RiTailwindCssFill className="text-blue-400 text-6xl" />,
+      icon: (
+        <RiTailwindCssFill className="text-blue-400 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
     {
       name: 'JavaScript',
       value: 65,
       color: 'warning',
-      icon: <IoLogoJavascript className="text-yellow-500 text-6xl" />,
+      icon: (
+        <IoLogoJavascript className="text-yellow-500 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
     {
       name: 'Node.js',
       value: 60,
       color: 'default',
-      icon: <IoLogoNodejs className="text-green-500 text-6xl" />,
+      icon: (
+        <IoLogoNodejs className="text-green-500 text-5xl sm:text-4xl md:text-3xl" />
+      ),
     },
   ];
 
   return (
-    <div className="flex flex-col gap-12 w-full max-w-5xl mx-auto bg-gradient-to-r from-gray-100 via-white to-gray-100 p-10 rounded-3xl shadow-2xl">
+    <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full max-w-5xl mx-auto bg-gradient-to-r from-gray-100 via-white to-gray-100 p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl md:shadow-2xl">
       {skills.map((skill, index) => (
         <div
           key={index}
-          className="flex items-center gap-10 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
+          className="flex items-center gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg md:shadow-2xl hover:shadow-lg md:hover:shadow-2xl transition-transform transform hover:scale-105"
         >
-          {/* Icône */}
-          <div className="flex items-center justify-center w-24 h-24 bg-gray-200 rounded-full">
+          <div className="flex items-center justify-center w-20 h-20 sm:w-16 sm:h-16 md:w-14 md:h-14 bg-gray-200 rounded-full">
             {skill.icon}
           </div>
-          {/* Texte et barre */}
           <div className="flex flex-col flex-1">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-2 sm:mb-3 md:mb-4">
               <span
-                className="text-2xl font-bold"
+                className="text-xl sm:text-lg md:text-base font-bold"
                 style={{ fontFamily: 'Fira Code, monospace' }}
               >
                 {skill.name}
               </span>
-              <span className="text-lg font-medium text-gray-500">
+              <span className="text-md sm:text-sm md:text-xs font-medium text-gray-500">
                 {skill.value}%
               </span>
             </div>
@@ -76,7 +86,7 @@ export const ProgressBar = () => {
               aria-label={`${skill.name} progress`}
               color={skill.color}
               value={skill.value}
-              className="h-5"
+              className="h-3 sm:h-2 md:h-1.5"
             />
           </div>
         </div>
