@@ -31,7 +31,7 @@ export const HomeSectionsTitle = ({ section }) => {
   return (
     <h2 className="relative text-4xl sm:text-6xl mb-5 text-title">
       {title}
-      <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] sm:text-[120px] text-[#c4c3c334] z-[-1] pointer-events-none whitespace-nowrap uppercase">
+      <span className="hidden sm:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] sm:text-[120px] text-[#c4c3c334] z-[-1] pointer-events-none whitespace-nowrap uppercase">
         {BackTitle}
       </span>
     </h2>
