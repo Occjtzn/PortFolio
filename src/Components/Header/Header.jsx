@@ -6,7 +6,7 @@ export const Header = () => (
   <div className="relative w-full h-screen">
     <HeaderPicture />
     <HeaderTitle />
-    <div className="absolute bottom-10 left-10 md:bottom-2 md:left-14 lg:bottom-5 lg:left-20 hidden md:block">
+    <div className="absolute bottom-10 left-10 md:bottom-6 md:left-12 lg:bottom-10 lg:left-14 hidden md:block">
       <ScrollIndicator />
     </div>
   </div>

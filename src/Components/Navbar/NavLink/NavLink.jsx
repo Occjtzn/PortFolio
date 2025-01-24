@@ -28,7 +28,7 @@ export const NavLink = () => {
           ) : (
             <RouterNavLink
               to={link.to}
-              className="relative px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg uppercase font-medium font-firaCode tracking-wide cursor-pointer text-white bg-highlight rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+              className="relative px-4 py-2 text-xs sm:text-sm md:text-base lg:px-8 lg:py-4 lg:text-2xl uppercase font-medium lg:font-bold font-firaCode tracking-wide cursor-pointer text-white bg-highlight rounded-lg lg:rounded-2xl shadow-md lg:shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl lg:hover:scale-110 lg:hover:shadow-3xl"
             >
               {link.name}
               <span className="absolute inset-0 bg-white opacity-0 rounded-lg transition-opacity duration-300 group-hover:opacity-10"></span>
