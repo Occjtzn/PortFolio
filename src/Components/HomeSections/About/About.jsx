@@ -11,10 +11,10 @@ export const About = () => (
     <div className="relative w-[80%] h-[2px] mb-36 my-20 mx-auto rounded bg-gradient-to-r from-highlight to-bgDark" />
 
     <p className="mb-[20px] text-text text-center max-w-[900px] leading-relaxed font-body font-light text-2xl">
-      Passionné par le développement web, je conçois des solutions modernes et
-      performantes. Avec des technologies comme{' '}
+      Passionné par le développement web et l'IT, je conçois des solutions
+      modernes et performantes. Avec des technologies comme{' '}
       <strong className="font-code text-highlight font-medium">
-        JavaScript, React, HTML5 et CSS3,
+        JavaScript, TypeScript, React, HTML5 et CSS3, TailwindCSS,
       </strong>{' '}
       je crée des interfaces intuitives et centrées sur l'utilisateur.
       <br />
