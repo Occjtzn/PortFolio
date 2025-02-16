@@ -34,7 +34,7 @@ export const FormContact = () => {
   return (
     <section className="flex flex-col items-center p-10 bg-gray-100 rounded-xl shadow-lg w-full max-w-3xl mx-auto border border-gray-300">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">
-        Besoin d'échanger ?
+        Envie d'échanger ?
       </h2>
       <form
         ref={form}
