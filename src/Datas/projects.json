@@ -5,7 +5,7 @@
     "imgSrc": "/assets/Images/CardsImg/Chalets-Aude-App.webp",
     "Description": "Projet personnel en React (en cours ...)",
     "GitLink": "https://github.com/Occjtzn/ChaletAude",
-    "Site": "https://chalet-aude-pmvb.vercel.app/",
+    "Site": "https://chalet-aude.vercel.app/",
     "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoReact"]
   },
   {
