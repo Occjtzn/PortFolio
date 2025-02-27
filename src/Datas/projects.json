@@ -6,11 +6,17 @@
     "description": "Site Vitrine de location de chalets de mes parents",
     "gitLink": "https://github.com/Occjtzn/ChaletAude",
     "site": "https://chalet-aude.vercel.app/",
-    "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoReact", "IoLogoSass"],
+    "technologies": [
+      "IoLogoHtml5",
+      "IoLogoCss3",
+      "IoLogoReact",
+      "IoLogoJavascript",
+      "IoLogoSass"
+    ],
     "context": "Développement d'un site vitrine pour mettre en avant les chalets à louer dans l'Aude, avec une interface claire et accessible aux visiteurs souhaitant découvrir les offres disponibles.",
     "problematic": "Comment proposer une plateforme attrayante, intuitive et performante pour mettre en valeur les chalets et faciliter la prise de contact des potentiels locataires ?",
     "solution": "Création d'un site responsive en utilisant React pour une meilleure modularité, Sass pour une personnalisation avancée du design, et une mise en page optimisée pour améliorer l'expérience utilisateur et la visibilité des offres."
-  },  
+  },
   {
     "id": "H57842",
     "title": "Portfolio - Développement Front-End & Back-End",
@@ -18,11 +24,18 @@
     "description": "Projet From Scratch : Créer mon Portfolio",
     "gitLink": "https://github.com/Occjtzn/PortFolio",
     "site": "https://port-folio-pearl-gamma.vercel.app/",
-    "technologies": ["IoLogoHtml5","IoLogoCss3", "IoLogoReact", "IoLogoJavascript", "IoLogoSass","RiTailwindCssFill"],
+    "technologies": [
+      "IoLogoHtml5",
+      "IoLogoCss3",
+      "IoLogoReact",
+      "IoLogoJavascript",
+      "IoLogoSass",
+      "RiTailwindCssFill"
+    ],
     "context": "Création d'un portfolio moderne pour mettre en avant mes compétences et projets.",
     "problematic": "Comment assurer une navigation fluide et interactive tout en optimisant les performances du portfolio avec des animations et un design épuré ?",
     "solution": "Utilisation de React pour la modularité, Tailwind CSS pour le design, et optimisation des animations avec Framer Motion pour améliorer la fluidité et réduire la charge sur le navigateur."
-  },  
+  },
   {
     "id": "H57743",
     "title": "Kasa - Plateforme de Location Immobilière",
@@ -30,7 +43,13 @@
     "description": "Projet Fictif : Créer interface de Kasa",
     "gitLink": "https://github.com/Occjtzn/KasaApp",
     "site": "https://kasa-app-theta.vercel.app/",
-    "technologies": ["IoLogoHtml5", "IoLogoCss3", "IoLogoReact", "IoLogoJavascript", "IoLogoSass"],
+    "technologies": [
+      "IoLogoHtml5",
+      "IoLogoCss3",
+      "IoLogoReact",
+      "IoLogoJavascript",
+      "IoLogoSass"
+    ],
     "context": "Projet réalisé dans le cadre d'une formation en développement web, avec pour objectif de reproduire l'interface d'une plateforme de location immobilière en suivant une maquette fournie.",
     "problematic": "Comment structurer une application React moderne et maintenable, tout en respectant une maquette précise et en garantissant une navigation fluide pour les utilisateurs ?",
     "solution": "Utilisation de React pour organiser les composants de manière modulaire, Sass pour un style plus structuré et évolutif, et mise en place d’un système de gestion des routes pour offrir une navigation dynamique et intuitive."

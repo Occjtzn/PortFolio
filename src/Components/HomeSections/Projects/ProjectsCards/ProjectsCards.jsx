@@ -1,15 +1,15 @@
-import { useState } from "react";
-import projects from "../../../../Datas/projects.json";
+import { useState } from 'react';
+import projects from '../../../../Datas/projects.json';
 import {
   IoLogoHtml5,
   IoLogoCss3,
   IoLogoReact,
   IoLogoJavascript,
   IoLogoSass,
-} from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiLighthouse } from "react-icons/si";
-import { ProjectModal } from "../ProjectModal/ProjectModal"; // Import du modal
+} from 'react-icons/io5';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { SiLighthouse } from 'react-icons/si';
+import { ProjectModal } from '../ProjectModal/ProjectModal'; // Import du modal
 
 export const ProjectsCards = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -19,8 +19,15 @@ export const ProjectsCards = () => {
     IoLogoCss3: <IoLogoCss3 className="text-css text-4xl" title="CSS3" />,
     IoLogoReact: <IoLogoReact className="text-react text-4xl" title="React" />,
     IoLogoSass: <IoLogoSass className="text-sass text-4xl" title="Sass" />,
-    IoLogoJavascript: <IoLogoJavascript className="text-javascript text-4xl" title="JavaScript" />,
-    SiLighthouse: <SiLighthouse className="text-red-500 text-4xl" title="Lighthouse" />,
+    IoLogoJavascript: (
+      <IoLogoJavascript
+        className="text-javascript text-4xl"
+        title="JavaScript"
+      />
+    ),
+    SiLighthouse: (
+      <SiLighthouse className="text-red-500 text-4xl" title="Lighthouse" />
+    ),
     RiTailwindCssFill: <RiTailwindCssFill className="text-tailwind text-5xl" />,
   };
 
@@ -81,7 +88,10 @@ export const ProjectsCards = () => {
           </div>
         </div>
       ))}
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 };

@@ -1,14 +1,17 @@
-import { IoClose } from "react-icons/io5";
+import { useRef } from 'react';
+import { IoCloseCircleOutline } from 'react-icons/io5';
 
 const highlightKeywords = (text) => {
-  if (!text) return "";
+  if (!text) return '';
 
-  const keywords = ["React", "Tailwind CSS", "Framer Motion", "Sass"];
-  const regex = new RegExp(`\\b(${keywords.join("|")})\\b`, "gi");
+  const keywords = ['React', 'Tailwind CSS', 'Framer Motion', 'Sass'];
+  const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
 
   return text.split(regex).map((part, index) =>
     keywords.includes(part) ? (
-      <span key={index} className="text-highlight font-bold">{part}</span>
+      <span key={index} className="text-highlight font-bold">
+        {part}
+      </span>
     ) : (
       part
     )
@@ -18,14 +21,33 @@ const highlightKeywords = (text) => {
 export const ProjectModal = ({ project, onClose }) => {
   if (!project) return null;
 
+  const modalRef = useRef(null);
+
+  const handleOutsideClick = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white mt-24 w-full max-w-5xl p-8 rounded-xl shadow-2xl relative max-h-[80vh] overflow-hidden">
-        <button onClick={onClose} className="absolute top-6 right-6 text-gray-600 hover:text-gray-900">
-          <IoClose className="text-3xl" />
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+      onClick={handleOutsideClick}
+    >
+      <div
+        className="bg-white mt-24 w-full max-w-5xl p-8 rounded-xl shadow-2xl relative max-h-[80vh] overflow-hidden"
+        ref={modalRef}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-6 right-6 text-gray-600 hover:text-highlight"
+        >
+          <IoCloseCircleOutline className="text-3xl" />
         </button>
 
-        <h2 className="text-3xl font-bold text-gray-800 mb-4 self-start">{project.title}</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-4 self-start">
+          {project.title}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <img
@@ -41,22 +63,34 @@ export const ProjectModal = ({ project, onClose }) => {
 
             {project.context && (
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Contexte</h3>
-                <p className="text-gray-600 text-base leading-relaxed">{highlightKeywords(project.context)}</p>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Contexte
+                </h3>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  {highlightKeywords(project.context)}
+                </p>
               </div>
             )}
 
             {project.problematic && (
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Problématique</h3>
-                <p className="text-gray-600 text-base leading-relaxed">{highlightKeywords(project.problematic)}</p>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Problématique
+                </h3>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  {highlightKeywords(project.problematic)}
+                </p>
               </div>
             )}
 
             {project.solution && (
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Solution</h3>
-                <p className="text-gray-600 text-base leading-relaxed">{highlightKeywords(project.solution)}</p>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Solution
+                </h3>
+                <p className="text-gray-600 text-base leading-relaxed">
+                  {highlightKeywords(project.solution)}
+                </p>
               </div>
             )}
           </div>

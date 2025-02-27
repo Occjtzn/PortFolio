@@ -20,7 +20,7 @@ module.exports = {
         sass: '#CF649A',
         react: '#61DAFB',
         tailwind: '#38B2AC',
-        javascript: '#F7DF1E',
+        javascript: '#EAB308',
         nodejs: '#83CD29',
       },
       fontFamily: {

@@ -1,5 +1,5 @@
-import { HomeSectionsTitle } from "../HomeSectionsTitle/HomeSectionsTitle";
-import { ProjectsCards } from "./ProjectsCards/ProjectsCards";
+import { HomeSectionsTitle } from '../HomeSectionsTitle/HomeSectionsTitle';
+import { ProjectsCards } from './ProjectsCards/ProjectsCards';
 
 export const Projects = () => {
   return (
