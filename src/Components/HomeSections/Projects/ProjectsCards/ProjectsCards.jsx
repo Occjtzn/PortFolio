@@ -1,30 +1,27 @@
-import projects from '../../../../Datas/projects.json';
+import { useState } from "react";
+import projects from "../../../../Datas/projects.json";
 import {
   IoLogoHtml5,
   IoLogoCss3,
   IoLogoReact,
   IoLogoJavascript,
-} from 'react-icons/io5';
-import { SiLighthouse } from 'react-icons/si';
+  IoLogoSass,
+} from "react-icons/io5";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiLighthouse } from "react-icons/si";
+import { ProjectModal } from "../ProjectModal/ProjectModal"; // Import du modal
 
 export const ProjectsCards = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const iconMap = {
-    IoLogoHtml5: (
-      <IoLogoHtml5 className="text-orange-500 text-4xl" title="HTML5" />
-    ),
-    IoLogoCss3: <IoLogoCss3 className="text-blue-500 text-4xl" title="CSS3" />,
-    IoLogoReact: (
-      <IoLogoReact className="text-cyan-500 text-4xl" title="React" />
-    ),
-    IoLogoJavascript: (
-      <IoLogoJavascript
-        className="text-yellow-500 text-4xl"
-        title="JavaScript"
-      />
-    ),
-    SiLighthouse: (
-      <SiLighthouse className="text-red-500 text-4xl" title="Lighthouse" />
-    ),
+    IoLogoHtml5: <IoLogoHtml5 className="text-html text-4xl" title="HTML5" />,
+    IoLogoCss3: <IoLogoCss3 className="text-css text-4xl" title="CSS3" />,
+    IoLogoReact: <IoLogoReact className="text-react text-4xl" title="React" />,
+    IoLogoSass: <IoLogoSass className="text-sass text-4xl" title="Sass" />,
+    IoLogoJavascript: <IoLogoJavascript className="text-javascript text-4xl" title="JavaScript" />,
+    SiLighthouse: <SiLighthouse className="text-red-500 text-4xl" title="Lighthouse" />,
+    RiTailwindCssFill: <RiTailwindCssFill className="text-tailwind text-5xl" />,
   };
 
   return (
@@ -32,7 +29,7 @@ export const ProjectsCards = () => {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="relative w-full max-w-[700px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl bg-[#f4f4f4] border border-gray-300 hover:shadow-2xl transition-transform duration-300"
+          className="relative w-full max-w-[700px] mx-auto h-auto overflow-hidden rounded-xl shadow-xl bg-bgLight border border-gray-300 hover:shadow-2xl transition-transform duration-300"
         >
           <div className="relative group w-full h-[300px] overflow-hidden shadow-large rounded-t-lg bg-gray-100">
             <img
@@ -43,25 +40,25 @@ export const ProjectsCards = () => {
               height="300"
             />
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-center mb-10 px-6 py-4 bg-[#1d1f20] bg-opacity-80 rounded-lg shadow-lg leading-relaxed text-lg">
-                {project.Description}
+              <p className="text-white text-center mb-10 px-6 py-4 bg-textDarker bg-opacity-80 rounded-lg shadow-lg leading-relaxed text-lg">
+                {project.title}
               </p>
 
               <div className="flex space-x-6">
                 <a
-                  href={project.GitLink}
+                  href={project.gitLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-[#e7b676] text-[#1d1f20] font-semibold text-lg rounded-lg shadow-md hover:bg-[#dbc8af] hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+                  className="px-6 py-3 bg-highlight text-textDarker font-semibold text-lg rounded-lg shadow-md hover:bg-opacity-90 hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
                 >
                   GitHub
                 </a>
-                {project.Site && (
+                {project.site && (
                   <a
-                    href={project.Site}
+                    href={project.site}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3 bg-[#e7b676] text-[#1d1f20] font-semibold text-lg rounded-lg shadow-md hover:bg-[#dbc8af] hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+                    className="px-6 py-3 bg-highlight text-textDarker font-semibold text-lg rounded-lg shadow-md hover:bg-opacity-90 hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
                   >
                     Site
                   </a>
@@ -74,8 +71,17 @@ export const ProjectsCards = () => {
               iconMap[tech] ? <span key={index}>{iconMap[tech]}</span> : null
             )}
           </div>
+          <div className="text-center pb-6">
+            <button
+              onClick={() => setSelectedProject(project)}
+              className="px-6 py-3 bg-highlight text-textDarker font-semibold text-lg rounded-lg shadow-md hover:bg-opacity-90 hover:shadow-lg transition duration-300 ease-in-out"
+            >
+              A propos
+            </button>
+          </div>
         </div>
       ))}
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </div>
   );
 };

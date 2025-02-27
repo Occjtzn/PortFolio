@@ -15,6 +15,13 @@ module.exports = {
         textDark: '#262626',
         textDarker: '#0D0D0D',
         highlight: '#eca445',
+        html: '#E44D26',
+        css: '#1572B6',
+        sass: '#CF649A',
+        react: '#61DAFB',
+        tailwind: '#38B2AC',
+        javascript: '#F7DF1E',
+        nodejs: '#83CD29',
       },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
