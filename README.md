@@ -29,7 +29,7 @@ Développé avec un souci de performance, de lisibilité du code et d’esthéti
 1. Clonez le dépôt :
 
 ```bash
-git clone <URL_DU_DEPOT>
+git clone <https://github.com/Occjtzn/PortFolio>
 ```
 
 2. Accédez au dossier :
@@ -54,10 +54,10 @@ yarn dev
 
 ## 🔹 Scripts utiles
 
-- `yarn dev` : Lance le serveur en mode développement  
-- `yarn build` : Génère un build optimisé pour la production  
-- `yarn preview` : Prévisualise le site après build  
-- `yarn lint` : Analyse le code avec ESLint  
+- `yarn dev` : Lance le serveur en mode développement
+- `yarn build` : Génère un build optimisé pour la production
+- `yarn preview` : Prévisualise le site après build
+- `yarn lint` : Analyse le code avec ESLint
 - `yarn format` : Formate le code avec Prettier
 
 ---
@@ -99,7 +99,7 @@ PortFolio/
 
 ## 📇 Auteur
 
-Ce projet a été conçu et développé dans une démarche professionnelle, mettant en avant la maîtrise des technologies modernes du web front-end.  
+Ce projet a été conçu et développé dans une démarche professionnelle, mettant en avant la maîtrise des technologies modernes du web front-end.
 Il reflète une expertise en développement d’interfaces dynamiques, performantes et accessibles.
 
 Pour toute demande de collaboration ou d'information, n'hésitez pas à utiliser le formulaire de contact disponible sur le site.
